@@ -1,0 +1,6 @@
+{
+  "name": "TasteSkill Core Agent",
+  "provider": "tasteskill.dev",
+  "version": "1.0.0",
+  "features": ["code-inspection", "schema-validation"]
+}

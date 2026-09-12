@@ -1,0 +1,6 @@
+{
+  "skill": "SysLab 2.0 Backend Coordinator",
+  "target": "backend/prisma",
+  "allowed_engines": ["postgresql"],
+  "enforce_migrations": true
+}
