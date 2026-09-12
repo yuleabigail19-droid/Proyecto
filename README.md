@@ -1,7 +1,7 @@
-# 😚 Proyecto de Sistemas Paralelos — SYSTEMHOME
+# Proyecto de Sistemas Paralelos — SYSTEMHOME
 
-> **Integrantes del Grupo:**
-1. Yulenka Abigail Magne Jimenez - [Código/Matrícula]
+> **Integrante del Grupo:**
+> * Yulenka Abigail Magne Jimenez
 >
 > **Docente:** Ing. Elias Cassal Baldiviezo  
 > **Materia:** Sistemas Paralelos  
@@ -9,28 +9,29 @@
 
 ---
 
-## 📍 1. Descripción del Proyecto
+## 1. Descripción del Proyecto
 
-**SYSTEMHOME** es una plataforma web para la gestión integral de servicios tecnológicos y sistemas de seguridad electrónica (cámaras, cercos eléctricos, alarmas, climatización) bajo la arquitectura distribuida **SysLab 2.0** con persistencia Prisma y PostgreSQL.
+**SYSTEMHOME** es una plataforma web para la gestión integral de servicios tecnológicos y sistemas de seguridad electrónica (cámaras de vigilancia, cercos eléctricos, sistemas de alarmas, climatización y controles de acceso) orientada a hogares, comercios e industrias.
 
----
-
-## 📧 2. Arquitectura de Tecnologás (SysLab 2.0)
-
-* **Frontend:** Interfaz de usuario (puerto 3000).
-* **Backend:** API RESTful Node.js/Express (puerto 4000).
-* **Persistencia / Base de Datos:** PostgreSQL (puerto 5432) con Prisma ORM.
-* **Agente de IA:Rewlas (`agente/rules.md`) y skills TasteSkill.
+El sistema permite centralizar la administración de clientes, el catálogo de servicios técnicos, la recepción y seguimiento de solicitudes de atención, así como la programación de visitas para instalaciones y mantenimientos preventivos/correctivos bajo la arquitectura distribuida **SysLab 2.0** con persistencia **Prisma ORM** sobre PostgreSQL.
 
 ---
 
-## 🔩 3. Estructura del Repositorio
+## 2. Arquitectura de Tecnologías (SysLab 2.0)
+
+* **Frontend:** Interfaz de usuario web (puerto `3000`).
+* **Backend:** API RESTful Node.js/Express (puerto `4000`).
+* **Persistencia / Base de Datos:** PostgreSQL (puerto `5432`) con Prisma ORM.
+* **Agente de IA:** Reglas operativas (`agente/rules.md`) y skills TasteSkill.
+
+---
+
+## 3. Estructura del Repositorio
 
 ```text
 .
 ├── agente/                 # Skills e instrucciones del agente de IA
-╜── backend,                # Código fuente del Backend y Prisma
-╜── frontend/               # Código fuente del Frontend
-╜── docker-compose.yml      # Orquestación multi-contenedor
+├── backend/                # Código fuente del Backend y Prisma
+├── frontend/               # Código fuente del Frontend
+├── docker-compose.yml      # Orquestación multi-contenedor
 └── README.md               # Documentación general
-b``
