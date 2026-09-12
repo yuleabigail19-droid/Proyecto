@@ -1,6 +1,7 @@
 {
-  "skill": "SysLab 2.0 Backend Coordinator",
+  "system": "SYSTEMHOME",
+  "skill": "SysLab 2.0 Service & Maintenance Dispatcher",
   "target": "backend/prisma",
   "allowed_engines": ["postgresql"],
-  "enforce_migrations": true
+  "rules": ["validate_pending_status", "service_catalog_sync"]
 }

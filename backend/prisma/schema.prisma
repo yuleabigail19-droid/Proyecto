@@ -7,10 +7,34 @@ generator client {
   provider = "prisma-client-js"
 }
 
-model Task {
-  id          Int      @id @default(autoincrement())
-  title       String
-  description String?
-  status      String   @default("PENDING")
-  createdAt   DateTime @default(now())
+model Cliente {
+  id          Int                 @id @default(autoincrement())
+  nombre      String
+  telefono    String
+  direccion   String
+  email       String?
+  solicitudes SolicitudServicio[]
+  createdAt   DateTime            @default(now())
+}
+
+model Servicio {
+  id               Int                 @id @default(autoincrement())
+  nombre           String              @unique
+  descripcion      String?
+  precioReferencial Decimal?            @db.Decimal(10, 2)
+  solicitudes      SolicitudServicio[]
+  createdAt        DateTime            @default(now())
+}
+
+model SolicitudServicio {
+  id           Int       @id @default(autoincrement())
+  clienteId    Int
+  servicioId   Int
+  descripcion  String
+  direccion    String
+  estado       String    @default("Pendiente") // Pendiente, Programado, En proceso, Finalizado, Cancelado
+  fechaProgramada DateTime?
+  cliente      Cliente   @relation(fields: [clienteId], references: [id])
+  servicio     Servicio  @relation(fields: [servicioId], references: [id])
+  createdAt    DateTime  @default(now())
 }
